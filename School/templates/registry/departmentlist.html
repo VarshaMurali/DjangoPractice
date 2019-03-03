@@ -1,0 +1,9 @@
+{% extends 'registry/base.html' %}
+{% block body_block %}
+<h2>List of Departments</h2>
+<ol>
+  {% for department in departments %}
+  <li><a href="{{department.id}}">{{department.department_name}}</a></li>
+  {% endfor %}
+</ol>
+{% endblock %}

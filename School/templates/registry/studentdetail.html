@@ -1,0 +1,10 @@
+{%  extends 'registry/base.html' %}
+{% block body_block %}
+<p>Name of the student : {{student.student_name}}</p>
+<p>Rank : {{student.rank}}</p>
+<p>Department : {{student.department}}</p>
+<div>
+  <a href="{% url 'registry:updatestudent' pk=student.pk %}" class="btn btn-primary" >Update</a>
+  <a href="{% url 'registry:deletestudent' pk=student.pk %}" class="btn btn-primary" >Delete</a>
+</div>
+{% endblock %}
