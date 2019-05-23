@@ -1,0 +1,10 @@
+{% extends 'registry/base.html' %}
+{% block body_block %}
+<h3>Teachers List</h3>
+<ul>
+  {% for teacher in teachers%}
+  <li><a href="{% url 'registry:teacherdetail' pk=teacher.pk %}"> {{teacher.teacher_name}}</a></li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

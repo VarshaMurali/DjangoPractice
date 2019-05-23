@@ -1,0 +1,9 @@
+{% extends 'registry/base.html' %}
+{% block body_block %}
+<h1>Delete {{teacher.teacher_name}} ?</h1>
+<form  method="post">
+  {% csrf_token %}
+  <input type="Submit" class="btn btn-primary" name="" value="Delete">
+  <a href="{% url 'registry:teacherdetail' pk=teacher.pk %}" class="btn btn-primary" >Cancel</a>
+</form>
+{% endblock %}

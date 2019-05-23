@@ -1,0 +1,16 @@
+{% extends 'registry/base.html' %}
+{% block body_block %}
+<h1>
+  {% if not form.instance.pk %}
+  Create Department
+  {% else %}
+  Update Department
+  {% endif %}
+</h1>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+  <input type="submit" class="btn btn-primary" value="Updated Departmentlist">
+  <a href="{% url 'registry:departmentlist' %}" class="btn btn-primary" value="cancel" >Cancel</a>
+  </form>
+{% endblock %}

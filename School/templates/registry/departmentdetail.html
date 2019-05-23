@@ -1,0 +1,9 @@
+{% extends 'registry/base.html' %}
+{% block body_block %}
+<p>Name of the department : {{department.department_name}}</p>
+<p>Head of the department : {{department.department_head}}</p>
+<p>Total number of students : {{department.total_students}}</p>
+<p>Duration of the course : {{department.duration}}</p>
+<a href="{% url 'registry:updatedepartment' pk=department.pk %}" class="btn btn-primary" >Update</a>
+<a href="{% url 'registry:deletedepartment' pk=department.pk %}" class="btn btn-primary" >Delete</a>
+{% endblock %}
