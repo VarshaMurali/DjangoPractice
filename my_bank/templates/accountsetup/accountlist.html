@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Account List</h1>
+    <ul>
+      {% for account in accountlist %}
+      <li>{{account.account_number}} - {{account.account_name}} - {{account.balance}}
+        <a href="{% url 'accountsetup:depositamount' pk=account.pk %}">Deposit</a>
+        <a href="{% url 'accountsetup:withdrawamount' pk=account.pk %}">Withdraw</a>
+      </li>
+
+      {% endfor %}
+    </ul>
+
+  </body>
+</html>
